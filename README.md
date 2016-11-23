@@ -11,5 +11,8 @@
 
 ## Changelog
 
+### 0.1.1 (2016-11-23)
+Fixed setting IDs.
+
 ### 0.1 (2016-11-23)
 First release.

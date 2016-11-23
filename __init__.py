@@ -13,11 +13,11 @@ def __init():
     from ._content_export import Driver as ContentExportDriver
 
     # Resources
-    lang.register_package(__name__, alias='vk')
-    assetman.register_package(__name__, alias='vk')
+    lang.register_package(__name__, alias='vkontakte')
+    assetman.register_package(__name__, alias='vkontakte')
 
     # Lang globals
-    lang.register_global('vkontakte_admin_settings_url', lambda: settings.form_url('vk'))
+    lang.register_global('vkontakte_admin_settings_url', lambda: settings.form_url('vkontakte'))
 
     # Content export driver
     content_export.register_driver(ContentExportDriver())

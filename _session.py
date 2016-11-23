@@ -18,11 +18,11 @@ class Session:
         """
         self._access_token = access_token
 
-        self._app_id = app_id or _settings.get('vk.app_id')
+        self._app_id = app_id or _settings.get('vkontakte.app_id')
         if not self._app_id:
             raise RuntimeError('Application ID is not defined.')
 
-        self._app_secret = app_secret or _settings.get('vk.app_secret')
+        self._app_secret = app_secret or _settings.get('vkontakte.app_secret')
         if not self._app_id:
             raise RuntimeError('Application secret key is not defined.')
 

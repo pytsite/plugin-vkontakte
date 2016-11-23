@@ -16,9 +16,9 @@ class Auth(_widget.Abstract):
         """
         super().__init__(uid, **kwargs)
 
-        self._app_id = _settings.get('vk.app_id')
+        self._app_id = _settings.get('vkontakte.app_id')
         if not self._app_id:
-            raise RuntimeError("Settings parameter 'vk.app_id' is not defined.")
+            raise RuntimeError("Settings parameter 'vkontakte.app_id' is not defined.")
 
         self._scope = kwargs.get('scope', ('wall', 'offline', 'photos'))
         self._access_url = kwargs.get('access_url', '')
