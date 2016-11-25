@@ -21,7 +21,7 @@ class Driver(_content_export.AbstractDriver):
     def get_name(self) -> str:
         """Get system name of the driver.
         """
-        return 'vk'
+        return 'vkontakte'
 
     def get_description(self) -> str:
         """Get human readable description of the driver.
@@ -66,7 +66,7 @@ class Driver(_content_export.AbstractDriver):
             else:
                 r = s.wall_post(owner_id, message)
 
-            _logger.info("Export finished. '{}'. VK response: {}".format(entity.title, r))
+            _logger.info("Export finished. '{}'. Vkontakte response: {}".format(entity.title, r))
 
         except Exception as e:
             raise _content_export.error.ExportError(e)
