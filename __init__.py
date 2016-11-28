@@ -8,7 +8,7 @@ __license__ = 'MIT'
 
 
 def __init():
-    from pytsite import content_export, assetman, lang, events, settings, permissions
+    from pytsite import assetman, lang, events, settings, permissions
     from . import _eh, _settings_form
     from ._content_export import Driver as ContentExportDriver
 
@@ -20,7 +20,11 @@ def __init():
     lang.register_global('vkontakte_admin_settings_url', lambda: settings.form_url('vkontakte'))
 
     # Content export driver
-    content_export.register_driver(ContentExportDriver())
+    try:
+        from plugins import content_export
+        content_export.register_driver(ContentExportDriver())
+    except ImportError as e:
+        raise RuntimeError("Required plugin is not found: {}".format(e))
 
     # Permissions
     permissions.define_permission('vkontakte.settings.manage', 'vkontakte@manage_vkontakte_settings', 'app')

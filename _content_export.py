@@ -2,7 +2,8 @@
 """
 from frozendict import frozendict as _frozendict
 import re as _re
-from pytsite import content as _content, content_export as _content_export, logger as _logger, widget as _widget
+from pytsite import content as _content, logger as _logger, widget as _widget
+from plugins import content_export as _content_export
 from ._widget import Auth as _VKAuthWidget
 from ._session import Session as _VKSession
 

@@ -1,7 +1,7 @@
 """PytSite Vkontakte Event Handlers.
 """
-from pytsite import content_export as _content_export, settings as _settings, router as _router, lang as _lang, \
-    auth as _auth
+from pytsite import settings as _settings, router as _router, lang as _lang, auth as _auth
+from plugins import content_export as _content_export
 from . import _session
 
 __author__ = 'Alexander Shepetko'
