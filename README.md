@@ -1,19 +1,19 @@
 # PytSite Vkontakte Plugin
 
-[Vkontakte](https://vk.com) support.
-
-
 ## Changelog
 
+### 0.3.1 (2016-12-19)
+plugin.json updated.
+
 ### 0.3 (2016-11-28)
-- Added support for `content_export` as plugin.
-- Updated plugin.json.
+- Support of `content_export` as plugin.
+- plugin.json updated.
 
 ### 0.2 (2016-11-25)
-Changed content export driver ID.
+Content export driver ID changed.
 
 ### 0.1.1 (2016-11-23)
-Fixed setting IDs.
+Setting IDs changed.
 
 ### 0.1 (2016-11-23)
 First release.
