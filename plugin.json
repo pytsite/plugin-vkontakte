@@ -1,8 +1,8 @@
 {
   "description": {
-    "en": "Vkontakte support",
-    "ru": "Поддержка Вконтакте",
-    "uk": "Підримка Вконтактє"
+    "en": "Vkontakte",
+    "ru": "Вконтакте",
+    "uk": "Вконтактє"
   },
   "url": "https://github.com/pytsite/plugin-vkontakte",
   "author": {
