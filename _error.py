@@ -11,3 +11,11 @@ class RequestError(Exception):
 
 class MethodError(Exception):
     pass
+
+
+class AppIdNotSet(Exception):
+    pass
+
+
+class AppSecretNotSet(Exception):
+    pass

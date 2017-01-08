@@ -1,8 +1,8 @@
 {
   "description": {
-    "en": "Vkontakte",
-    "ru": "Вконтакте",
-    "uk": "Вконтактє"
+    "en": "Vkontakte API",
+    "ru": "Vkontakte API",
+    "uk": "Vkontakte API"
   },
   "url": "https://github.com/pytsite/plugin-vkontakte",
   "author": {
@@ -12,8 +12,6 @@
   },
   "requires": {
     "packages": [],
-    "plugins": [
-      "content_export"
-    ]
+    "plugins": []
   }
 }
