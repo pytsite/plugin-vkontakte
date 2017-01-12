@@ -55,7 +55,7 @@ class Auth(_widget.Abstract):
 
         wrapper = _widget.Container(self.uid)
 
-        wrapper.add_widget(_widget.input.Text(
+        wrapper.append_child(_widget.input.Text(
             uid=self.uid + '[access_url]',
             weight=10,
             label=_lang.t('vkontakte@access_url'),
@@ -64,7 +64,7 @@ class Auth(_widget.Abstract):
             required=True,
         ))
 
-        wrapper.add_widget(_widget.input.Integer(
+        wrapper.append_child(_widget.input.Integer(
             uid=self.uid + '[group_id]',
             weight=20,
             label=_lang.t('vkontakte@group_id'),
