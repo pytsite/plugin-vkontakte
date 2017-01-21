@@ -40,7 +40,7 @@ class Auth(_widget.Abstract):
     def group_id(self) -> str:
         return self._group_id
 
-    def get_html_em(self, **kwargs) -> _html.Element:
+    def _get_element(self, **kwargs) -> _html.Element:
         """Render widget.
         :param **kwargs:
         """
@@ -72,4 +72,4 @@ class Auth(_widget.Abstract):
             h_size='col-sm-2'
         ))
 
-        return self._group_wrap(wrapper)
+        return wrapper
