@@ -1,4 +1,4 @@
-"""PytSite Vkontakte Event Handlers.
+"""PytSite Vkontakte Event Handlers
 """
 from pytsite import settings as _settings, router as _router, lang as _lang, auth as _auth
 from plugins import content_export as _content_export
@@ -11,11 +11,8 @@ __license__ = 'MIT'
 
 def router_dispatch():
     if _auth.get_current_user().has_permission('vkontakte.settings.manage'):
-        msg = _lang.t('vkontakte@plugin_setup_required_warning')
         if not _settings.get('vkontakte.app_id') or not _settings.get('vkontakte.app_secret'):
-            _router.session().add_warning_message(msg)
-        else:
-            _router.session().get_warning_message(msg)
+            _router.session().add_warning_message(_lang.t('vkontakte@plugin_setup_required_warning'))
 
 
 def odm_entity_pre_save_content_export(entity: _content_export.model.ContentExport):

@@ -1,4 +1,4 @@
-"""PytSite VK Package.
+"""PytSite VK Plugin
 """
 # Public API
 from ._api import get_app_id, get_app_secret
@@ -11,7 +11,7 @@ __license__ = 'MIT'
 
 def _init():
     # Locally necessary import
-    from pytsite import assetman, lang, events, settings, permissions
+    from pytsite import assetman, lang, events, settings, permissions, router
     from . import _eh, _settings_form
 
     # Resources
@@ -28,7 +28,7 @@ def _init():
     settings.define('vkontakte', _settings_form.Form, 'vkontakte@vkontakte', 'fa fa-vk', 'vkontakte.settings.manage')
 
     # Event handlers
-    events.listen('pytsite.router.dispatch', _eh.router_dispatch)
+    router.on_dispatch(_eh.router_dispatch)
     events.listen('pytsite.odm.entity.pre_save.content_export', _eh.odm_entity_pre_save_content_export)
 
 
