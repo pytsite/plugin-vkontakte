@@ -4,6 +4,10 @@
 ## Changelog
 
 
+### 0.4.4 (2017-05-03)
+Removed non-necessary event handler
+
+
 ### 0.4.3 (2017-03-30)
 Fixed notifications. 
 

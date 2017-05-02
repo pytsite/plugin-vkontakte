@@ -11,7 +11,7 @@ __license__ = 'MIT'
 
 def _init():
     # Locally necessary import
-    from pytsite import assetman, lang, events, settings, permissions, router
+    from pytsite import assetman, lang, settings, permissions, router
     from . import _eh, _settings_form
 
     # Resources
@@ -29,7 +29,6 @@ def _init():
 
     # Event handlers
     router.on_dispatch(_eh.router_dispatch)
-    events.listen('pytsite.odm.entity.pre_save.content_export', _eh.odm_entity_pre_save_content_export)
 
 
 _init()
