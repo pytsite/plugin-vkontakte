@@ -11,12 +11,11 @@ __license__ = 'MIT'
 
 def _init():
     # Locally necessary import
-    from pytsite import assetman, lang, settings, permissions, router
+    from pytsite import lang, settings, permissions, router
     from . import _eh, _settings_form
 
     # Resources
     lang.register_package(__name__, alias='vkontakte')
-    assetman.register_package(__name__, alias='vkontakte')
 
     # Lang globals
     lang.register_global('vkontakte_admin_settings_url', lambda language, args: settings.form_url('vkontakte'))

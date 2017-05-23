@@ -4,8 +4,12 @@
 ## Changelog
 
 
+### 0.4.5 (2017-05-23)
+Removed unnecessary assetman registration.
+
+
 ### 0.4.4 (2017-05-03)
-Removed non-necessary event handler
+Removed unnecessary event handler
 
 
 ### 0.4.3 (2017-03-30)
