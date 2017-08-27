@@ -1,4 +1,6 @@
 {
+  "name": "plugins.vkontakte",
+  "version": "0.4.6",
   "description": {
     "en": "Vkontakte API",
     "ru": "Vkontakte API",

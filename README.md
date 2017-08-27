@@ -4,6 +4,10 @@
 ## Changelog
 
 
+### 0.4.6 (2017-08-27)
+`plugin.json` updated.
+
+
 ### 0.4.5 (2017-05-23)
 Removed unnecessary assetman registration.
 
