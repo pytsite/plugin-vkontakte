@@ -2,7 +2,7 @@
 """
 import requests as _requests
 from os import path as _path
-from pytsite import file as _file, settings as _settings
+from plugins import file as _file, settings as _settings
 from . import _error
 
 __author__ = 'Alexander Shepetko'

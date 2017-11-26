@@ -1,6 +1,7 @@
 """PytSite Vkontakte Event Handlers
 """
-from pytsite import settings as _settings, router as _router, lang as _lang, auth as _auth
+from pytsite import router as _router, lang as _lang
+from plugins import settings as _settings, auth as _auth
 
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'

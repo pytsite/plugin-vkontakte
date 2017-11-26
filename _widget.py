@@ -1,6 +1,7 @@
 """PytSite Vkontakte Widgets.
 """
-from pytsite import widget as _widget, html as _html, lang as _lang, router as _router, settings as _settings
+from pytsite import html as _html, lang as _lang, router as _router
+from plugins import widget as _widget, settings as _settings
 
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
