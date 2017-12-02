@@ -1,7 +1,7 @@
 """PytSite Vkontakte Widgets.
 """
-from pytsite import html as _html, lang as _lang, router as _router
-from plugins import widget as _widget, settings as _settings
+from pytsite import html as _html, lang as _lang, router as _router, reg as _reg
+from plugins import widget as _widget
 
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
@@ -17,7 +17,7 @@ class Auth(_widget.Abstract):
         """
         super().__init__(uid, **kwargs)
 
-        self._app_id = _settings.get('vkontakte.app_id')
+        self._app_id = _reg.get('vkontakte.app_id')
         if not self._app_id:
             raise RuntimeError("Settings parameter 'vkontakte.app_id' is not defined.")
 

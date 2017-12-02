@@ -2,7 +2,8 @@
 """
 import requests as _requests
 from os import path as _path
-from plugins import file as _file, settings as _settings
+from pytsite import reg as _reg
+from plugins import file as _file
 from . import _error
 
 __author__ = 'Alexander Shepetko'
@@ -18,11 +19,11 @@ class Session:
         """
         self._access_token = access_token
 
-        self._app_id = app_id or _settings.get('vkontakte.app_id')
+        self._app_id = app_id or _reg.get('vkontakte.app_id')
         if not self._app_id:
             raise RuntimeError('Application ID is not defined.')
 
-        self._app_secret = app_secret or _settings.get('vkontakte.app_secret')
+        self._app_secret = app_secret or _reg.get('vkontakte.app_secret')
         if not self._app_id:
             raise RuntimeError('Application secret key is not defined.')
 
