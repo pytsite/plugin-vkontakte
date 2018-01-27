@@ -1,11 +1,11 @@
 """PytSite Vkontakte Widgets.
 """
-from pytsite import html as _html, lang as _lang, router as _router, reg as _reg
-from plugins import widget as _widget
-
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
+
+from pytsite import lang as _lang, router as _router, reg as _reg
+from plugins import widget as _widget
 
 
 class Auth(_widget.Abstract):
@@ -41,7 +41,7 @@ class Auth(_widget.Abstract):
     def group_id(self) -> str:
         return self._group_id
 
-    def _get_element(self, **kwargs) -> _html.Element:
+    def _get_element(self, **kwargs) -> _widget.Container:
         """Render widget.
         :param **kwargs:
         """

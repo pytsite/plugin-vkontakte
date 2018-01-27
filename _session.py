@@ -1,14 +1,14 @@
 """PytSite Vkontakte Session.
 """
+__author__ = 'Alexander Shepetko'
+__email__ = 'a@shepetko.com'
+__license__ = 'MIT'
+
 import requests as _requests
 from os import path as _path
 from pytsite import reg as _reg
 from plugins import file as _file
 from . import _error
-
-__author__ = 'Alexander Shepetko'
-__email__ = 'a@shepetko.com'
-__license__ = 'MIT'
 
 
 class Session:
