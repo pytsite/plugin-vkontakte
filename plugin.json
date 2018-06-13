@@ -1,6 +1,6 @@
 {
   "name": "vkontakte",
-  "version": "1.3",
+  "version": "1.4",
   "description": {
     "en": "Vkontakte API",
     "ru": "Vkontakte API",
@@ -13,10 +13,9 @@
     "url": "https://shepetko.com"
   },
   "requires": {
-    "packages": [],
     "plugins": [
       "auth>=1.8",
-      "file",
+      "file>=1.5",
       "font_awesome",
       "settings>=1.3",
       "widget"

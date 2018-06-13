@@ -66,9 +66,9 @@ class Session:
         """Upload a photo to the user's or community's wall.
         """
         if isinstance(photo, _file.model.AbstractImage):
-            file = open(photo.local_path, 'rb')
+            file = open(photo.storage_path, 'rb')
             if not name:
-                name = _path.basename(photo.local_path)
+                name = _path.basename(photo.storage_path)
         elif isinstance(photo, str):
             file = open(photo, 'rb')
             if not name:
