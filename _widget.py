@@ -4,7 +4,7 @@ __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
-from pytsite import lang as _lang, router as _router, reg as _reg
+from pytsite import lang as _lang, router as _router, reg as _reg, html as _html
 from plugins import widget as _widget
 
 
@@ -41,7 +41,7 @@ class Auth(_widget.Abstract):
     def group_id(self) -> str:
         return self._group_id
 
-    def _get_element(self, **kwargs) -> _widget.Container:
+    def _get_element(self, **kwargs) -> _html.Element:
         """Render widget.
         :param **kwargs:
         """
@@ -54,23 +54,23 @@ class Auth(_widget.Abstract):
             'v': '5.37',
         })
 
-        wrapper = _widget.Container(self.uid)
+        wrapper = _html.TagLessElement()
 
-        wrapper.append_child(_widget.input.Text(
+        wrapper.append(_widget.input.Text(
             uid=self.uid + '[access_url]',
             weight=10,
             label=_lang.t('vkontakte@access_url'),
             help=_lang.t('vkontakte@access_url_help', {'link': authorize_url}),
             value=self.access_url,
             required=True,
-        ))
+        ).renderable())
 
-        wrapper.append_child(_widget.input.Integer(
+        wrapper.append(_widget.input.Integer(
             uid=self.uid + '[group_id]',
             weight=20,
             label=_lang.t('vkontakte@group_id'),
             value=self.group_id,
             h_size='col-sm-2'
-        ))
+        ).renderable())
 
         return wrapper
